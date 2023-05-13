@@ -1,0 +1,60 @@
+# ggf. eigene Sachen eintragen
+
+<MONTAG>
+08:00 - 09:30 | WSK
+09:45 - 11:15 | WSK
+11:35 - 13:05 | Sport
+25min Pause
+13:30 - 15:00 | LF09
+15:15 - 16:45 | LF09
+
+<DIENSTAG>
+08:00 - 09:30 | LF06
+09:45 - 11:15 | LF08 IT-W
+11:35 - 13:05 | LF09
+25min Pause
+13:30 - 15:00 | Englisch
+15:00 Schluss
+
+<MITTWOCH>
+08:00 - 09:30 | LF08
+09:45 - 11:15 | LF06
+11:35 - 13:05 | OL
+25min Pause
+13:30 - 15:00 | WPF - CISCO
+15:15 - 16:45 | WPF - CISCO
+
+<DONNERSTAG>
+08:00 - 09:30 | LF07
+09:45 - 11:15 | LF07
+11:35 - 13:05 | LF07
+
+<FREITAG>
+08:00 - 09:30 | LF08
+09:45 - 11:15 | LF08
+
+<MONTAG_THEMEN>
+WSK:
+Sport:
+LF09:
+
+<DIENSTAG_THEMEN>
+LF06:
+LF08 IT-W:
+LF09:
+Englisch:
+
+<MITTWOCH_THEMEN>
+LF08:
+LF06:
+OL:
+WPF - CISCO:
+
+<DONNERSTAG_THEMEN>
+LF07:
+LF07:
+LF07:
+
+<FREITAG_THEMEN>
+LF08:
+LF08:
