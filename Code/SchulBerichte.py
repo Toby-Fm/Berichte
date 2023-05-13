@@ -198,11 +198,11 @@ for themen, thema in freitag_themen_mapping.items():
 
 
 # Speichern der Word-Datei
-new_file_path = r"C:\Users\tobyw\Documents\Programmierung\Python\Berichte\test\word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
+new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
 doc.SaveAs(new_file_path)
 
 # Exportieren der Word-Datei als PDF
-pdf_file_path = r"C:\Users\tobyw\Documents\Programmierung\Python\Berichte\test\pdf\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
+pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
 doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
 # Schließen der Word-Datei und Beenden von Word
