@@ -42,24 +42,25 @@ word.Selection.Range.Text = date2
 
 # Zuordnung der Aufgaben für jeden Tag der Woche aus der Textdatei zu einer Variablen und Erstellung von Zuordnungen zwischen diesen Aufgaben und Nachweisen im Word-Dokument. # noqa: E501
 montag_start = data.find("<MONTAG>") + len("<MONTAG>")
-montag_end = data.find("<Dienstag>") 
+montag_end = data.find("<DIENSTAG>") 
 montag_aufgaben = data[montag_start:montag_end].strip().split("\n")
 
 dienstag_start = data.find("<DIENSTAG>") + len("<DIENSTAG>")
-dienstag_end = len(data)
+dienstag_end = data.find("<MITTWOCH>")
 dienstag_aufgaben = data[dienstag_start:dienstag_end].strip().split("\n")
 
 mittwoch_start = data.find("<MITTWOCH>") + len("<MITTWOCH>")
-mittwoch_end = len(data)
-mittwoch_aufgaben = data[mittwoch_start:dienstag_end].strip().split("\n")
+mittwoch_end = data.find("<DONNERSTAG>")
+mittwoch_aufgaben = data[mittwoch_start:mittwoch_end].strip().split("\n")
 
 donnerstag_start = data.find("<DONNERSTAG>") + len("<DONNERSTAG>")
-donnerstag_end = len(data)
-donnerstag_aufgaben = data[donnerstag_start:dienstag_end].strip().split("\n")
+donnerstag_end = data.find("<FREITAG>")
+donnerstag_aufgaben = data[donnerstag_start:donnerstag_end].strip().split("\n")
 
 freitag_start = data.find("<FREITAG>") + len("<FREITAG>")
 freitag_end = len(data)
-freitag_aufgaben = data[freitag_start:dienstag_end].strip().split("\n")
+freitag_aufgaben = data[freitag_start:freitag_end].strip().split("\n")
+
 
 #Für Themen
 montag_themen_start = data.find("<MONTAG_THEMEN>") + len("<MONTAG_THEMEN>")
