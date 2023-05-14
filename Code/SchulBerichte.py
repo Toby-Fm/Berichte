@@ -37,7 +37,7 @@ date1 = "04.03.2023"
 word.Selection.Find.Execute("<DATE1>")
 word.Selection.Range.Text = date1
 
-date2 = "10.03.2024"
+date2 = "10.03.2023"
 word.Selection.Find.Execute("<DATE2>")
 word.Selection.Range.Text = date2
 
