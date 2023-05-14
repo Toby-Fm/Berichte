@@ -33,7 +33,7 @@ ausbildungsjahr = 2
 word.Selection.Find.Execute("<AJ>")
 word.Selection.Range.Text = ausbildungsjahr
 
-date1 = "04.03.2023"
+date1 = "06.03.2023"
 word.Selection.Find.Execute("<DATE1>")
 word.Selection.Range.Text = date1
 
