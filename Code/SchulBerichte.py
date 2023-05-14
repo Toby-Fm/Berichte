@@ -21,7 +21,7 @@ with open(txt_file_path, "r", encoding="utf-8") as f:
 # Suchen und Ersetzen von Textmarkern im Word-Dokument mit den entsprechenden Daten aus der Textdatei # noqa: E501
 word.Selection.Find.ClearFormatting()          
 
-nummer = 73  
+nummer = 78  
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
@@ -33,11 +33,11 @@ ausbildungsjahr = 2
 word.Selection.Find.Execute("<AJ>")
 word.Selection.Range.Text = ausbildungsjahr
 
-date1 = "06.03.2023"
+date1 = "29.04.2023"
 word.Selection.Find.Execute("<DATE1>")
 word.Selection.Range.Text = date1
 
-date2 = "10.03.2023"
+date2 = "05.05.2023"
 word.Selection.Find.Execute("<DATE2>")
 word.Selection.Range.Text = date2
 

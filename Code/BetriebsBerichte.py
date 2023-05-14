@@ -21,7 +21,7 @@ with open(txt_file_path, "r", encoding="utf-8") as f:
 # Suchen und Ersetzen von Textmarkern im Word-Dokument mit den entsprechenden Daten aus der Textdatei # noqa: E501
 word.Selection.Find.ClearFormatting()          
 
-nummer = 73  
+nummer = 79  
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
@@ -33,11 +33,11 @@ ausbildungsjahr = 2
 word.Selection.Find.Execute("<AJ>")
 word.Selection.Range.Text = ausbildungsjahr
 
-date1 = "06.03.2023"
+date1 = "06.05.2023"
 word.Selection.Find.Execute("<DATE1>")
 word.Selection.Range.Text = date1
 
-date2 = "10.03.2023"
+date2 = "12.05.2023"
 word.Selection.Find.Execute("<DATE2>")
 word.Selection.Range.Text = date2
 
@@ -63,65 +63,61 @@ freitag_end = len(data)
 freitag_aufgaben = data[freitag_start:freitag_end].strip().split("\n")
 
 #Zuordnen 
-montag_fach_mapping = {
-    "<FACH1>": montag_aufgaben[0],
-    "<FACH2>": montag_aufgaben[1],
-    "<FACH3>": montag_aufgaben[2],
-    "<FACH4>": montag_aufgaben[3],
-    "<FACH5>": montag_aufgaben[4],
-    "<FACH6>": montag_aufgaben[5]
+montag_nachweis_mapping = {
+    "<NACHWEIS1>": montag_aufgaben[0],
+    "<NACHWEIS2>": montag_aufgaben[1],
+    "<NACHWEIS3>": montag_aufgaben[2],
+    "<NACHWEIS4>": montag_aufgaben[3]
 }
 
-dienstag_fach_mapping = {
-    "<FACH7>": dienstag_aufgaben[0],
-    "<FACH8>": dienstag_aufgaben[1],
-    "<FACH9>": dienstag_aufgaben[2],
-    "<FACH10>": dienstag_aufgaben[3],
-    "<FACH11>": dienstag_aufgaben[4],
-    "<FACH12>": dienstag_aufgaben[5]
+dienstag_nachweis_mapping = {
+    "<NACHWEIS5>": dienstag_aufgaben[0],
+    "<NACHWEIS6>": dienstag_aufgaben[1],
+    "<NACHWEIS7>": dienstag_aufgaben[2],
+    "<NACHWEIS8>": dienstag_aufgaben[3]
 }
 
-mittwoch_fach_mapping = {
-    "<FACH13>": mittwoch_aufgaben[0],
-    "<FACH14>": mittwoch_aufgaben[1],
-    "<FACH15>": mittwoch_aufgaben[2],
-    "<FACH16>": mittwoch_aufgaben[3],
-    "<FACH17>": mittwoch_aufgaben[4],
-    "<FACH18>": mittwoch_aufgaben[5]
+mittwoch_nachweis_mapping = {
+    "<NACHWEIS9>": mittwoch_aufgaben[0],
+    "<NACHWEIS10>": mittwoch_aufgaben[1],
+    "<NACHWEIS11>": mittwoch_aufgaben[2],
+    "<NACHWEIS12>": mittwoch_aufgaben[3]
 }
 
-donnerstag_fach_mapping = {
-    "<FACH19>": donnerstag_aufgaben[0],
-    "<FACH20>": donnerstag_aufgaben[1],
-    "<FACH21>": donnerstag_aufgaben[2]
-
+donnerstag_nachweis_mapping = {
+    "<NACHWEIS13>": donnerstag_aufgaben[0],
+    "<NACHWEIS14>": donnerstag_aufgaben[1],
+    "<NACHWEIS15>": donnerstag_aufgaben[2],
+    "<NACHWEIS16>": donnerstag_aufgaben[3]
 }
 
-freitag_fach_mapping = {
-    "<FACH22>": freitag_aufgaben[0],
-    "<FACH23>": freitag_aufgaben[1]
+freitag_nachweis_mapping = {
+    "<NACHWEIS17>": freitag_aufgaben[0],
+    "<NACHWEIS18>": freitag_aufgaben[1],
+    "<NACHWEIS19>": freitag_aufgaben[2],
+    "<NACHWEIS20>": freitag_aufgaben[3]
 }
 
 # Suchen und Ersetzen der Abschnitte in der Word-Datei
 word.Selection.Find.ClearFormatting()
-for fach, aufgabe in montag_fach_mapping.items():
-    word.Selection.Find.Execute(fach)
+for nachweis, aufgabe in montag_nachweis_mapping.items():
+    word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
-for fach, aufgabe in dienstag_fach_mapping.items():
-    word.Selection.Find.Execute(fach)
+for nachweis, aufgabe in dienstag_nachweis_mapping.items():
+    word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
-for fach, aufgabe in mittwoch_fach_mapping.items():
-    word.Selection.Find.Execute(fach)
+for nachweis, aufgabe in mittwoch_nachweis_mapping.items():
+    word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
-for fach, aufgabe in donnerstag_fach_mapping.items():
-    word.Selection.Find.Execute(fach)
+for nachweis, aufgabe in donnerstag_nachweis_mapping.items():
+    word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
-for fach, aufgabe in freitag_fach_mapping.items():
-    word.Selection.Find.Execute(fach)
+for nachweis, aufgabe in freitag_nachweis_mapping.items():
+    word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
 #Überprüfen ob es die Datei schon gibt. 

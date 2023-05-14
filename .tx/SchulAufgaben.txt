@@ -1,19 +1,19 @@
 # ggf. eigene Sachen eintragen
 
 <MONTAG>
-08:00 - 09:30 | WSK
-09:45 - 11:15 | WSK
-11:35 - 13:05 | Sport
-25min Pause
-13:30 - 15:00 | LF09
-15:15 - 16:45 | LF09
+Frei
+Frei
+Frei
+Frei
+Frei
+Frei
 
 <DIENSTAG>
 08:00 - 09:30 | LF06
 09:45 - 11:15 | LF08 IT-W
 11:35 - 13:05 | LF09
 25min Pause
-13:30 - 15:00 | Englisch
+13:30 - 15:00 | Englisch Frei
 15:00 Schluss
 
 <MITTWOCH>
@@ -34,26 +34,26 @@
 09:45 - 11:15 | LF08
 
 <MONTAG_THEMEN>
-WSK:
-Sport:
-LF09: 
+WSK: Frei
+Sport: Frei
+LF09: Frei
 
 <DIENSTAG_THEMEN>
-LF06:
-LF08 IT-W:
-LF09:
-Englisch: 
+LF06: Über die Problem- und Change Enablement im 2nd-Level Support informiert
+LF08 IT-W: Übersicht von Online Marketing besprochen
+LF09: Arbeitsauftrag Labor-Netzwerk: Konfigurieren Sie NAT bzw. PAT am DSL-Router 
+Englisch: Klassenarbeit
 
 <MITTWOCH_THEMEN>
-LF08:
-LF06:
-WPF - CISCO:
+LF08: Klassenarbeit vorbereitung
+LF06: Klassenarbeit
+WPF - CISCO: Packet Tracer Aufgabe: 6.2.4 Configure Etherchannel, Laboraufgabe: 6.4.2 Implement Etherchannel
 
 <DONNERSTAG_THEMEN>
-LF07:
-LF07:
+LF07: "Nehmen Sie ein interoperables Smart-Home-System in Betrieb"
+LF07: "Implementieren Sie den NeoServer von mediola auf der CCU3."
 LF07:
 
 <FREITAG_THEMEN>
-LF08:
-LF08:
+LF08: CSV dateien auslesen, XML Dateien auslesen, XML Datei erstllen in Java
+LF08: -||-
