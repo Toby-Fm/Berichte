@@ -1,4 +1,5 @@
 #Import der benötigten Bibliotheken
+from pathlib import Path
 import win32com.client
 import datetime  # noqa: F401
 
@@ -36,7 +37,7 @@ date1 = "04.03.2023"
 word.Selection.Find.Execute("<DATE1>")
 word.Selection.Range.Text = date1
 
-date2 = "10.03.2023"
+date2 = "10.03.2024"
 word.Selection.Find.Execute("<DATE2>")
 word.Selection.Range.Text = date2
 
@@ -198,20 +199,64 @@ for themen, thema in freitag_themen_mapping.items():
     word.Selection.Range.Text = thema
 
 
-# Speichern der Word-Datei
-new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
-doc.SaveAs(new_file_path)
+#Überprüfen ob es die Datei schon gibt. 
+#os.path.exists(r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)) # noqa: E501
+path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
 
-if new_file_path:
-    print("Word-Dokument wurde erfoglreich erstellt.")
+if Path(path).exists():
+
+    print("+--------------------------+")
+    print("| Die Datei gibt es schon. |")
+    print("+--------------------------+")
+
+    doc.Close(False)
+    word.Quit()
+    #
+
+else: # Speichern der Word-Datei
+    new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
+    doc.SaveAs(new_file_path)
+
+    if new_file_path:
+        print("+------------------------------------------+")
+        print("| Word-Dokument wurde erfoglreich erstellt.|")
+        print("+------------------------------------------+")
+
+    # Exportieren der Word-Datei als PDF
+    pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+    doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
+
+    if pdf_file_path:
+        print("+----------------------------------------+")
+        print("| Word-Dokument wurde zu PDF umgewandelt.|")
+        print("+----------------------------------------+")
+    
+    # Schließen der Word-Datei und Beenden von Word
+    doc.Close()
+    word.Quit()
+
+
+
+
+
+# Speichern der Word-Datei
+#new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
+#doc.SaveAs(new_file_path)
+
+# if new_file_path:
+#     print("+------------------------------------------+")
+#     print("| Word-Dokument wurde erfoglreich erstellt.|")
+#     print("+------------------------------------------+")
 
 # Exportieren der Word-Datei als PDF
-pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
-doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
+# pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
+# doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
-if pdf_file_path:
-    print("Word-Dokument wurde zu PDF umgewandelt")
+# if pdf_file_path:
+#     print("+----------------------------------------+")
+#     print("| Word-Dokument wurde zu PDF umgewandelt.|")
+#     print("+----------------------------------------+")
 
 # Schließen der Word-Datei und Beenden von Word
-doc.Close()
-word.Quit()
+# doc.Close()
+# word.Quit()
