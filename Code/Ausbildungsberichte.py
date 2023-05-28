@@ -3,7 +3,7 @@ import win32com.client
 import datetime  # noqa: F401
 
 # Dateipfad für Word Vorlage festlegen
-file_path = r"C:\Users\tobyw\Documents\Arbeit\template.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
+file_path = r"C:\Users\"    #ggf. eigenen pfad einfügen  # noqa: E501
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -11,7 +11,7 @@ doc = word.Documents.Open(file_path)
 word.Visible = True  
 
 # Dateipfad für Textdatei festlegen
-txt_file_path = r"C:\Users\tobyw\Documents\Arbeit\wochenplan.txt"       #ggf. eigenen pfad einfügen # noqa: E501
+txt_file_path = r"C:\Users\Documents\Arbeit\wochenplan.txt"       #ggf. eigenen pfad einfügen # noqa: E501
 
 #Lesen der Daten aus der Textdatei
 with open(txt_file_path, "r", encoding="utf-8") as f:
@@ -24,7 +24,7 @@ nummer = 73
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
-name = "Toby Wichmann"
+name = ""
 word.Selection.Find.Execute("<NAME>")
 word.Selection.Range.Text = name
 
@@ -119,11 +119,11 @@ for nachweis, aufgabe in freitag_nachweis_mapping.items():
     word.Selection.Range.Text = aufgabe
 
 # Speichern der Word-Datei
-new_file_path = r"C:\Users\tobyw\Documents\Arbeit\Fertige Dokumente\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
+new_file_path = r"C:\Users\Documents\Arbeit\Fertige_Dokumente\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
 doc.SaveAs(new_file_path)
 
 # Exportieren der Word-Datei als PDF
-pdf_file_path = r"C:\Users\tobyw\Documents\Arbeit\Fertige Dokumente\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
+pdf_file_path = r"C:\Users\Documents\Arbeit\Fertige_Dokumente\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
 doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
 # Schließen der Word-Datei und Beenden von Word
