@@ -1,1 +1,3 @@
-bisschen faul um Berichte zu schreiben
+a bit lazy to write reports... 
+
+write things into the .txt files, connect the paths and run it. ggf. "pip3 Install win32".
