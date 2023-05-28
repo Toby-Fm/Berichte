@@ -4,7 +4,7 @@ import win32com.client
 import datetime  # noqa: F401
 #tstsetset
 # Dateipfad für Word Vorlage festlegen
-file_path = r"C:\Users\tobyw\Documents\Programmierung\Python\Berichte\doc\template.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
+file_path = r"C:\Users\Documents\Programmierung\Python\Berichte\doc\template.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -25,7 +25,7 @@ nummer = 79
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
-name = "Toby Wichmann"
+name = ""
 word.Selection.Find.Execute("<NAME>")
 word.Selection.Range.Text = name
 
@@ -135,7 +135,7 @@ if Path(path).exists():
     #
 
 else: # Speichern der Word-Datei
-    new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
+    new_file_path = r"C:\Users\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
     doc.SaveAs(new_file_path)
 
     if new_file_path:
@@ -144,7 +144,7 @@ else: # Speichern der Word-Datei
         print("+------------------------------------------+")
 
     # Exportieren der Word-Datei als PDF
-    pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+    pdf_file_path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
     doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
     if pdf_file_path:
