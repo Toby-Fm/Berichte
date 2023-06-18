@@ -4,7 +4,7 @@ import win32com.client
 import datetime  # noqa: F401
 #tstsetset
 # Dateipfad für Word Vorlage festlegen
-file_path = r"C:\Users\Documents\Programmierung\Python\Berichte\doc\template.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
+file_path = "Pfad zur template datei"    
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -12,7 +12,7 @@ doc = word.Documents.Open(file_path)
 word.Visible = True  
 
 # Dateipfad für Textdatei festlegen
-txt_file_path = r".tx\BetriebsAufgaben.txt"       #ggf. eigenen pfad einfügen # noqa: E501
+txt_file_path = r".tx\BetriebsAufgaben.txt"     
 
 #Lesen der Daten aus der Textdatei
 with open(txt_file_path, "r", encoding="utf-8") as f:
@@ -121,8 +121,7 @@ for nachweis, aufgabe in freitag_nachweis_mapping.items():
     word.Selection.Range.Text = aufgabe
 
 #Überprüfen ob es die Datei schon gibt. 
-#os.path.exists(r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)) # noqa: E501
-path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+path = r"C:\Users\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
 
 if Path(path).exists():
 
@@ -135,7 +134,7 @@ if Path(path).exists():
     #
 
 else: # Speichern der Word-Datei
-    new_file_path = r"C:\Users\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
+    new_file_path = r"C:\Users\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
     doc.SaveAs(new_file_path)
 
     if new_file_path:
@@ -144,7 +143,7 @@ else: # Speichern der Word-Datei
         print("+------------------------------------------+")
 
     # Exportieren der Word-Datei als PDF
-    pdf_file_path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+    pdf_file_path = r"C:\Users\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
     doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
     if pdf_file_path:
@@ -155,29 +154,3 @@ else: # Speichern der Word-Datei
     # Schließen der Word-Datei und Beenden von Word
     doc.Close()
     word.Quit()
-
-
-
-
-
-# Speichern der Word-Datei
-#new_file_path = r"C:\Users\tobyw\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2)    #ggf. eigenen pfad einfügen # noqa: E501
-#doc.SaveAs(new_file_path)
-
-# if new_file_path:
-#     print("+------------------------------------------+")
-#     print("| Word-Dokument wurde erfoglreich erstellt.|")
-#     print("+------------------------------------------+")
-
-# Exportieren der Word-Datei als PDF
-# pdf_file_path = r"C:\Users\tobyw\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2)      #ggf. eigenen pfad einfügen # noqa: E501
-# doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
-
-# if pdf_file_path:
-#     print("+----------------------------------------+")
-#     print("| Word-Dokument wurde zu PDF umgewandelt.|")
-#     print("+----------------------------------------+")
-
-# Schließen der Word-Datei und Beenden von Word
-# doc.Close()
-# word.Quit()
