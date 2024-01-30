@@ -4,7 +4,11 @@ import win32com.client
 import datetime  # noqa: F401
 
 # Dateipfad für Word Vorlage festlegen
+<<<<<<< HEAD:src/SchulBerichte.py
 file_path = r"C:\Users\Documents\Programmierung\Python\Berichte\doc\template_schule.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
+=======
+file_path = r"C:\Users\template_schule.docx"   
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -12,7 +16,7 @@ doc = word.Documents.Open(file_path)
 word.Visible = True  
 
 # Dateipfad für Textdatei festlegen
-txt_file_path = r".tx\SchulAufgaben.txt"       #ggf. eigenen pfad einfügen # noqa: E501
+txt_file_path = r".tx\SchulAufgaben.txt"      
 
 #Lesen der Daten aus der Textdatei
 with open(txt_file_path, "r", encoding="utf-8") as f:
@@ -25,7 +29,11 @@ nummer = 0
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
+<<<<<<< HEAD:src/SchulBerichte.py
 name = "Vorname Nachname"
+=======
+name = ""
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 word.Selection.Find.Execute("<NAME>")
 word.Selection.Range.Text = name
 
@@ -193,7 +201,13 @@ for themen, thema in freitag_themen_mapping.items():
     word.Selection.Find.Execute(themen)
     word.Selection.Range.Text = thema
 
+<<<<<<< HEAD:src/SchulBerichte.py
 path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+=======
+
+#Überprüfen ob es die Datei schon gibt. 
+path = r"C:\Users\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 
 if Path(path).exists():
 
@@ -206,7 +220,11 @@ if Path(path).exists():
     #
 
 else: # Speichern der Word-Datei
+<<<<<<< HEAD:src/SchulBerichte.py
     new_file_path = r"C:\Users\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
+=======
+    new_file_path = r"C:\Users\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
     doc.SaveAs(new_file_path)
 
     if new_file_path:
@@ -215,7 +233,11 @@ else: # Speichern der Word-Datei
         print("+------------------------------------------+")
 
     # Exportieren der Word-Datei als PDF
+<<<<<<< HEAD:src/SchulBerichte.py
     pdf_file_path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+=======
+    pdf_file_path = r"C:\Users\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
     doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
     if pdf_file_path:

@@ -1,6 +1,7 @@
 # ggf. eigene Sachen eintragen
 
 <MONTAG>
+<<<<<<< HEAD
 Unterrichtsfach 1
 Unterrichtsfach 2
 Unterrichtsfach 3
@@ -62,3 +63,92 @@ LF12b: Gruppenarbeit -> Firewallskript erstellt
 <FREITAG_THEMEN>
 WPF - CISCO: 
 LF12b: Gruppenarbeit -> Firewallskript erstellt
+=======
+-
+-
+-
+-
+-
+-
+
+<DIENSTAG>
+-
+-
+-
+-
+-
+-
+-
+
+<MITTWOCH>
+-
+-
+-
+-
+-
+-
+-
+
+<DONNERSTAG>
+-
+-
+-
+-
+-
+-
+-
+
+<FREITAG>
+-
+-
+-
+-
+-
+-
+-
+
+<MONTAG_THEMEN>
+-
+-
+-
+-
+-
+-
+-
+
+<DIENSTAG_THEMEN>
+-
+-
+-
+-
+-
+-
+-
+
+<MITTWOCH_THEMEN>
+-
+-
+-
+-
+-
+-
+-
+
+<DONNERSTAG_THEMEN>
+-
+-
+-
+-
+-
+-
+-
+
+<FREITAG_THEMEN>
+-
+-
+-
+-
+-
+-
+-
+>>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446
