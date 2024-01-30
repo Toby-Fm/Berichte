@@ -1,59 +1,64 @@
 # ggf. eigene Sachen eintragen
 
 <MONTAG>
-Frei
-Frei
-Frei
-Frei
-Frei
-Frei
+Unterrichtsfach 1
+Unterrichtsfach 2
+Unterrichtsfach 3
+Unterrichtsfach 4
+Unterrichtsfach 5
+Unterrichtsfach 6
 
 <DIENSTAG>
-08:00 - 09:30 | LF06
-09:45 - 11:15 | LF08 IT-W
-11:35 - 13:05 | LF09
-25min Pause
-13:30 - 15:00 | Englisch Frei
-15:00 Schluss
+Unterrichtsfach 1
+Unterrichtsfach 2
+Unterrichtsfach 3
+Unterrichtsfach 4
+Unterrichtsfach 5
+Unterrichtsfach 6
 
 <MITTWOCH>
-08:00 - 09:30 | LF08
-09:45 - 11:15 | LF06
-11:35 - 13:05 | OL
-25min Pause
-13:30 - 15:00 | WPF - CISCO
-15:15 - 16:45 | WPF - CISCO
+Unterrichtsfach 1
+Unterrichtsfach 2
+Unterrichtsfach 3
+Unterrichtsfach 4
+Unterrichtsfach 5
+Unterrichtsfach 6
 
 <DONNERSTAG>
-08:00 - 09:30 | LF07
-09:45 - 11:15 | LF07
-11:35 - 13:05 | LF07
+Unterrichtsfach 1
+Unterrichtsfach 2
+Unterrichtsfach 3
+Unterrichtsfach 4
+Unterrichtsfach 5
+Unterrichtsfach 6
 
 <FREITAG>
-08:00 - 09:30 | LF08
-09:45 - 11:15 | LF08
+Unterrichtsfach 1
+Unterrichtsfach 2
+Unterrichtsfach 3
+Unterrichtsfach 4
+Unterrichtsfach 5
+Unterrichtsfach 6
 
 <MONTAG_THEMEN>
-WSK: Frei
-Sport: Frei
-LF09: Frei
+LF10b: Vorbereitung auf Klassenarbeit
+LF10b: Vorbereitung auf Klassenarbeit
+LF10b: Vorbereitung auf Klassenarbeit
 
 <DIENSTAG_THEMEN>
-LF06: Über die Problem- und Change Enablement im 2nd-Level Support informiert
-LF08 IT-W: Übersicht von Online Marketing besprochen
-LF09: Arbeitsauftrag Labor-Netzwerk: Konfigurieren Sie NAT bzw. PAT am DSL-Router 
-Englisch: Klassenarbeit
+WSK: Präsentation vorbereitung (Über Italien)
+WSK: Präsentation vorbereitung (Über Italien)
 
 <MITTWOCH_THEMEN>
-LF08: Klassenarbeit vorbereitung
-LF06: Klassenarbeit
-WPF - CISCO: Packet Tracer Aufgabe: 6.2.4 Configure Etherchannel, Laboraufgabe: 6.4.2 Implement Etherchannel
+Englisch: Worksheet for summary of video on connected cars
+LF11b: Klassenarbeit geschrieben
+LF11b: Klassenarbeit geschrieben
 
 <DONNERSTAG_THEMEN>
-LF07: "Nehmen Sie ein interoperables Smart-Home-System in Betrieb"
-LF07: "Implementieren Sie den NeoServer von mediola auf der CCU3."
-LF07:
+LF12b: Gruppenarbeit -> Firewallskript erstellt
+LF12b: Gruppenarbeit -> Firewallskript erstellt
+LF12b: Gruppenarbeit -> Firewallskript erstellt
 
 <FREITAG_THEMEN>
-LF08: CSV dateien auslesen, XML Dateien auslesen, XML Datei erstllen in Java
-LF08: -||-
+WPF - CISCO: 
+LF12b: Gruppenarbeit -> Firewallskript erstellt
