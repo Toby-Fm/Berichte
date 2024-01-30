@@ -42,113 +42,41 @@ Unterrichtsfach 5
 Unterrichtsfach 6
 
 <MONTAG_THEMEN>
-LF10b: Vorbereitung auf Klassenarbeit
-LF10b: Vorbereitung auf Klassenarbeit
-LF10b: Vorbereitung auf Klassenarbeit
+Thema 1
+Thema 2
+Thema 3
+Thema 4
+Thema 5
+Thema 6
 
 <DIENSTAG_THEMEN>
-WSK: Präsentation vorbereitung (Über Italien)
-WSK: Präsentation vorbereitung (Über Italien)
+Thema 1
+Thema 2
+Thema 3
+Thema 4
+Thema 5
+Thema 6
 
 <MITTWOCH_THEMEN>
-Englisch: Worksheet for summary of video on connected cars
-LF11b: Klassenarbeit geschrieben
-LF11b: Klassenarbeit geschrieben
+Thema 1
+Thema 2
+Thema 3
+Thema 4
+Thema 5
+Thema 6
 
 <DONNERSTAG_THEMEN>
-LF12b: Gruppenarbeit -> Firewallskript erstellt
-LF12b: Gruppenarbeit -> Firewallskript erstellt
-LF12b: Gruppenarbeit -> Firewallskript erstellt
+Thema 1
+Thema 2
+Thema 3
+Thema 4
+Thema 5
+Thema 6
 
 <FREITAG_THEMEN>
-WPF - CISCO: 
-LF12b: Gruppenarbeit -> Firewallskript erstellt
-=======
--
--
--
--
--
--
-
-<DIENSTAG>
--
--
--
--
--
--
--
-
-<MITTWOCH>
--
--
--
--
--
--
--
-
-<DONNERSTAG>
--
--
--
--
--
--
--
-
-<FREITAG>
--
--
--
--
--
--
--
-
-<MONTAG_THEMEN>
--
--
--
--
--
--
--
-
-<DIENSTAG_THEMEN>
--
--
--
--
--
--
--
-
-<MITTWOCH_THEMEN>
--
--
--
--
--
--
--
-
-<DONNERSTAG_THEMEN>
--
--
--
--
--
--
--
-
-<FREITAG_THEMEN>
--
--
--
--
--
--
--
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446
+Thema 1
+Thema 2
+Thema 3
+Thema 4
+Thema 5
+Thema 6
