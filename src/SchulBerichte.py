@@ -4,11 +4,7 @@ import win32com.client
 import datetime  # noqa: F401
 
 # Dateipfad für Word Vorlage festlegen
-<<<<<<< HEAD:src/SchulBerichte.py
 file_path = r"C:\Users\Documents\Programmierung\Python\Berichte\doc\template_schule.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
-=======
-file_path = r"C:\Users\template_schule.docx"   
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -29,11 +25,7 @@ nummer = 0
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
-<<<<<<< HEAD:src/SchulBerichte.py
 name = "Vorname Nachname"
-=======
-name = ""
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 word.Selection.Find.Execute("<NAME>")
 word.Selection.Range.Text = name
 
@@ -103,9 +95,12 @@ montag_fach_mapping = {
 }
 
 dienstag_fach_mapping = {
-    "<FACH7>": dienstag_aufgaben[0],
-    "<FACH8>": dienstag_aufgaben[1],
-    "<FACH9>": dienstag_aufgaben[2],
+    "<FACH7>": montag_aufgaben[0],
+    "<FACH8>": montag_aufgaben[1],
+    "<FACH9>": montag_aufgaben[2],
+    "<FACH10>": montag_aufgaben[3],
+    "<FACH11>": montag_aufgaben[4],
+    "<FACH12>": montag_aufgaben[5]
 }
 
 mittwoch_fach_mapping = {
@@ -118,44 +113,68 @@ mittwoch_fach_mapping = {
 }
 
 donnerstag_fach_mapping = {
-    "<FACH19>": donnerstag_aufgaben[0],
-    "<FACH20>": donnerstag_aufgaben[1],
-    "<FACH21>": donnerstag_aufgaben[2]
+    "<FACH19>": mittwoch_aufgaben[0],
+    "<FACH20>": mittwoch_aufgaben[1],
+    "<FACH21>": mittwoch_aufgaben[2],
+    "<FACH22>": mittwoch_aufgaben[3],
+    "<FACH23>": mittwoch_aufgaben[4],
+    "<FACH24>": mittwoch_aufgaben[5]
 
 }
 
 freitag_fach_mapping = {
-    "<FACH22>": freitag_aufgaben[0],
-    "<FACH23>": freitag_aufgaben[1]
+    "<FACH25>": mittwoch_aufgaben[0],
+    "<FACH26>": mittwoch_aufgaben[1],
+    "<FACH27>": mittwoch_aufgaben[2],
+    "<FACH28>": mittwoch_aufgaben[3],
+    "<FACH29>": mittwoch_aufgaben[4],
+    "<FACH30>": mittwoch_aufgaben[5]
 }
 
 #Für Thema
 montag_themen_mapping =  {
     "<THEMA1>": montag_thema[0],
     "<THEMA2>": montag_thema[1],
-    "<THEMA3>": montag_thema[2]
+    "<THEMA3>": montag_thema[2],
+    "<THEMA4>": montag_thema[3],
+    "<THEMA5>": montag_thema[4],
+    "<THEMA6>": montag_thema[5]
 }
 
 dienstag_themen_mapping = {
-    "<THEMA4>": dienstag_thema[0],
-    "<THEMA5>": dienstag_thema[1],
+    "<THEMA7>": montag_thema[0],
+    "<THEMA8>": montag_thema[1],
+    "<THEMA9>": montag_thema[2],
+    "<THEMA10>": montag_thema[3],
+    "<THEMA11>": montag_thema[4],
+    "<THEMA12>": montag_thema[5]
 }
 
 mittwoch_themen_mapping = {
-    "<THEMA8>": mittwoch_thema[0],
-    "<THEMA9>": mittwoch_thema[1],
-    "<THEMA10>": mittwoch_thema[2]
+    "<THEMA13>": montag_thema[0],
+    "<THEMA14>": montag_thema[1],
+    "<THEMA15>": montag_thema[2],
+    "<THEMA16>": montag_thema[3],
+    "<THEMA17>": montag_thema[4],
+    "<THEMA18>": montag_thema[5]
 }
 
 donnerstag_themen_mapping = {
-    "<THEMA11>": donnerstag_thema[0],
-    "<THEMA12>": donnerstag_thema[1],
-    "<THEMA13>": donnerstag_thema[2]
+    "<THEMA19>": montag_thema[0],
+    "<THEMA20>": montag_thema[1],
+    "<THEMA21>": montag_thema[2],
+    "<THEMA22>": montag_thema[3],
+    "<THEMA23>": montag_thema[4],
+    "<THEMA24>": montag_thema[5]
 }
 
 freitag_themen_mapping = {
-    "<THEMA14>": freitag_thema[0],
-    "<THEMA15>": freitag_thema[1],
+    "<THEMA25>": montag_thema[0],
+    "<THEMA26>": montag_thema[1],
+    "<THEMA27>": montag_thema[2],
+    "<THEMA28>": montag_thema[3],
+    "<THEMA29>": montag_thema[4],
+    "<THEMA30>": montag_thema[5]
 }
 
 # Suchen und Ersetzen der Abschnitte in der Word-Datei
@@ -201,13 +220,7 @@ for themen, thema in freitag_themen_mapping.items():
     word.Selection.Find.Execute(themen)
     word.Selection.Range.Text = thema
 
-<<<<<<< HEAD:src/SchulBerichte.py
 path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
-=======
-
-#Überprüfen ob es die Datei schon gibt. 
-path = r"C:\Users\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
 
 if Path(path).exists():
 
@@ -220,11 +233,7 @@ if Path(path).exists():
     #
 
 else: # Speichern der Word-Datei
-<<<<<<< HEAD:src/SchulBerichte.py
     new_file_path = r"C:\Users\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
-=======
-    new_file_path = r"C:\Users\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
     doc.SaveAs(new_file_path)
 
     if new_file_path:
@@ -233,11 +242,7 @@ else: # Speichern der Word-Datei
         print("+------------------------------------------+")
 
     # Exportieren der Word-Datei als PDF
-<<<<<<< HEAD:src/SchulBerichte.py
     pdf_file_path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
-=======
-    pdf_file_path = r"C:\Users\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/SchulBerichte.py
     doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
     if pdf_file_path:

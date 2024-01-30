@@ -4,11 +4,7 @@ import win32com.client
 import datetime  # noqa: F401
 
 # Dateipfad für Word Vorlage festlegen
-<<<<<<< HEAD:src/BetriebsBerichte.py
 file_path = r"B:\Programmierung\Archiv\Python\Berichte\doc\template.docx"    #ggf. eigenen pfad einfügen  # noqa: E501
-=======
-file_path = "Pfad zur template datei"    
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
 
 # Öffnet Word und lädt die Vorlage
 word = win32com.client.Dispatch("Word.Application")
@@ -29,11 +25,7 @@ nummer = 00
 word.Selection.Find.Execute("<NR>")
 word.Selection.Range.Text = nummer
 
-<<<<<<< HEAD:src/BetriebsBerichte.py
 name = "Vorname Nachname"
-=======
-name = ""
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
 word.Selection.Find.Execute("<NAME>")
 word.Selection.Range.Text = name
 
@@ -128,12 +120,7 @@ for nachweis, aufgabe in freitag_nachweis_mapping.items():
     word.Selection.Find.Execute(nachweis)
     word.Selection.Range.Text = aufgabe
 
-<<<<<<< HEAD:src/BetriebsBerichte.py
 path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
-=======
-#Überprüfen ob es die Datei schon gibt. 
-path = r"C:\Users\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
 
 if Path(path).exists():
 
@@ -146,11 +133,7 @@ if Path(path).exists():
     #
 
 else: # Speichern der Word-Datei
-<<<<<<< HEAD:src/BetriebsBerichte.py
     new_file_path = r"C:\Users\Documents\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
-=======
-    new_file_path = r"C:\Users\Berichte\Word\Bericht vom {} bis {}.docx".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
     doc.SaveAs(new_file_path)
 
     if new_file_path:
@@ -159,11 +142,7 @@ else: # Speichern der Word-Datei
         print("+------------------------------------------+")
 
     # Exportieren der Word-Datei als PDF
-<<<<<<< HEAD:src/BetriebsBerichte.py
     pdf_file_path = r"C:\Users\Documents\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
-=======
-    pdf_file_path = r"C:\Users\Berichte\PDF\Bericht vom {} bis {}.pdf".format(date1, date2) # noqa: E501
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
     doc.ExportAsFixedFormat(pdf_file_path, ExportFormat=17, OpenAfterExport=False, OptimizeFor=0) # noqa: E501
 
     if pdf_file_path:
@@ -173,8 +152,4 @@ else: # Speichern der Word-Datei
     
     # Schließen der Word-Datei und Beenden von Word
     doc.Close()
-<<<<<<< HEAD:src/BetriebsBerichte.py
     word.Quit()
-=======
-    word.Quit()
->>>>>>> c1ce68a441217760cc8b39ef1bdbf9cc83696446:Code/BetriebsBerichte.py
