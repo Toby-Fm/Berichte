@@ -1,7 +1,6 @@
 # ggf. eigene Sachen eintragen
 
 <MONTAG>
-<<<<<<< HEAD
 Unterrichtsfach 1
 Unterrichtsfach 2
 Unterrichtsfach 3
